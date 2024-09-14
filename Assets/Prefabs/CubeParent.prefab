@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 2686394147595042211}
   - component: {fileID: 2351871343250195945}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Cube Annotation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &494013020264924885
 RectTransform:
   m_ObjectHideFlags: 0
@@ -752,8 +752,8 @@ MonoBehaviour:
   m_ExcludeUITouches: 1
   m_ARSessionOrigin: {fileID: 0}
   m_Annotations:
-  - m_AnnotationVisualization: {fileID: 0}
-    m_MaxFOVCenterOffsetAngle: 0.25
+  - m_AnnotationVisualization: {fileID: 5171014869284032362}
+    m_MaxFOVCenterOffsetAngle: 0.5
     m_MinAnnotationRange: 0
     m_MaxAnnotationRange: 10
 --- !u!1 &5367522933829882597
