@@ -5,6 +5,7 @@ using UnityEngine;
 public class Examinable : MonoBehaviour
 {
     private ExaminableManager _examinableManager;
+    public float scaleOffset = 1f;
 
     // Start is called before the first frame update
     void Start()

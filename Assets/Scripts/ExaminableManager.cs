@@ -8,6 +8,7 @@ public class ExaminableManager : MonoBehaviour
     private Transform _examineTarget;
     private Vector3 _originalPosition;
     private Quaternion _originalRotation;
+    private Vector3 _originalScale;
     private Examinable _currentExaminable;
     private bool _isExamined = false;
     [SerializeField]
@@ -41,8 +42,14 @@ public class ExaminableManager : MonoBehaviour
             _currentExaminable = examinable;
             _originalPosition = _currentExaminable.transform.position;
             _originalRotation = _currentExaminable.transform.rotation;
+            _originalScale = _currentExaminable.transform.localScale;
+
             _currentExaminable.transform.position = _examineTarget.position;
             _currentExaminable.transform.parent = _examineTarget;
+
+            Vector3 offsetScale = _originalScale * _currentExaminable.scaleOffset;
+            _currentExaminable.transform.localScale = offsetScale;
+
             _isExamined = true;
         }
     }
@@ -54,9 +61,11 @@ public class ExaminableManager : MonoBehaviour
             _currentExaminable.transform.parent = null;
             _currentExaminable.transform.position = _originalPosition;
             _currentExaminable.transform.rotation = _originalRotation;
+            _currentExaminable.transform.localScale = _originalScale;
             _currentExaminable = null;
             _originalPosition = Vector3.zero;
             _originalRotation = Quaternion.identity;
+            _originalScale = Vector3.one;
             _isExamined = false;
         }
     }
