@@ -947,7 +947,7 @@ MonoBehaviour:
   m_XROrigin: {fileID: 1742295342}
   m_ExcludeUITouches: 1
   m_ARSessionOrigin: {fileID: 0}
-  m_PlacementPrefab: {fileID: 1581453644399474856, guid: 9ae8dbfe9c1ae5e46a1c3c4a4389cbdd,
+  m_PlacementPrefab: {fileID: 6737634884788301477, guid: cd4acf03f67718e47bcedf312ac3f852,
     type: 3}
   m_FallbackLayerMask:
     serializedVersion: 2
@@ -1868,6 +1868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _examineTarget: {fileID: 845489547}
+  _rotateSpeed: 0.25
 --- !u!4 &992365187
 Transform:
   m_ObjectHideFlags: 0
