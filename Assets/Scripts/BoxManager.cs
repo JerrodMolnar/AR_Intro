@@ -1,14 +1,16 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BoxManager : MonoBehaviour
 {
     private string _correctGemValue = "BlueRedGreen";
     private string _enteredGemValue = string.Empty;
-    [SerializeField]
-    private Animator _boxAnimator;
     private int _amountOfGems = 3;
     private int _currentGem = 0;
+
+    public UnityEvent gameIsWon;
 
     private List<Gem> gems = new List<Gem>();
 
@@ -27,7 +29,7 @@ public class BoxManager : MonoBehaviour
     {
         if (_enteredGemValue == _correctGemValue)
         {
-            _boxAnimator.SetTrigger("Open");
+            gameIsWon.Invoke();
         }
         else
         {
